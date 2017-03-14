@@ -1,15 +1,11 @@
 import React from 'react'
+import {Link} from 'react-router'
 
 const List = props => {
   return (
-    <div>
-      <ol>
-        { props.data.resource.map(resource => {
-          return (
-            <li key={resource.id}>{resource.type}</li>
-          )
-        }) }
-      </ol>
+    <div className='list'>
+      <h1>Here is the list of chores!</h1>
+      <Link to='/Add'>Add a new chore</Link>
     </div>
   )
 }
